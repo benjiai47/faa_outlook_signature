@@ -1,97 +1,97 @@
-# Foundation AI Advisory Outlook Signature
+# Foundation AI Advisory Outlook Signatures
 
-Clean, Outlook-ready email signature files for Ben DeMichael at Foundation AI Advisory.
+Outlook-ready email signatures for the Foundation AI Advisory team. Each
+signature is plain HTML built from tables and inline styles for maximum
+compatibility with the Outlook (Word) rendering engine, including dark mode.
 
-## Closing Signature Text
+## Signatures
 
-Ben DeMichael  
-Managing Partner & Principal Advisor  
-Foundation AI Advisory  
-Business First. AI Applied.  
-m. (440)-503-2337  
-FoundationAIAdvisory.com
+| Person | Role | Preview |
+| --- | --- | --- |
+| Ben DeMichael | Managing Partner | [ben-demichael/preview.html](https://benjiai47.github.io/faa_outlook_signature/ben-demichael/preview.html) |
+| Jason Kapcar | Partner & Chief AI Officer | [jason-kapcar/preview.html](https://benjiai47.github.io/faa_outlook_signature/jason-kapcar/preview.html) |
+| Thomas Wagenberg | AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://benjiai47.github.io/faa_outlook_signature/thomas-wagenberg/preview.html) |
 
-## Files
+The landing page at
+[preview.html](https://benjiai47.github.io/faa_outlook_signature/preview.html)
+links to all three.
 
-- `signature.html` - the production Outlook signature HTML.
-- `signature.txt` - a plain-text fallback signature for clients that strip HTML.
-- `preview.html` - a browser preview that shows the signature with the included logo asset.
-- `assets/faa-logo-trimmed-300.png` - the real Foundation AI Advisory logo, trimmed from the supplied 300px file.
+## Repository layout
 
-## Outlook HTML
-
-Use this HTML for Outlook. It is table-based, inline-styled, and uses a clickable website URL plus a QR code linked to the same site.
-
-```html
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#2f3a40;">
-  <tr>
-    <td valign="middle" style="padding:0 28px 0 0;border-right:2px solid #2f66b3;width:250px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:250px;">
-        <tr>
-          <td align="center" style="padding:0 0 10px 0;">
-            <img src="assets/faa-logo-trimmed-300.png" width="220" alt="Foundation AI Advisory" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:220px;height:auto;">
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="font-size:17px;line-height:22px;mso-line-height-rule:exactly;color:#2f3a40;padding-top:8px;">
-            Business First. <span style="color:#2f66b3;">AI Applied.</span>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td valign="middle" style="padding:0 26px 0 28px;width:385px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:385px;">
-        <tr>
-          <td style="font-size:28px;line-height:34px;mso-line-height-rule:exactly;font-weight:700;color:#2f3a40;padding:0 0 4px 0;">Ben DeMichael</td>
-        </tr>
-        <tr>
-          <td style="font-size:20px;line-height:26px;mso-line-height-rule:exactly;color:#2f3a40;padding:0 0 20px 0;">Managing Partner &amp; Principal Advisor</td>
-        </tr>
-        <tr>
-          <td style="font-size:22px;line-height:26px;mso-line-height-rule:exactly;font-weight:700;color:#2f66b3;text-transform:uppercase;padding:0 0 6px 0;">Foundation AI Advisory</td>
-        </tr>
-        <tr>
-          <td style="font-size:20px;line-height:26px;mso-line-height-rule:exactly;color:#2f3a40;padding:0 0 14px 0;">Business First. <span style="color:#2f66b3;">AI Applied.</span></td>
-        </tr>
-        <tr>
-          <td style="padding:0 0 16px 0;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
-              <tr>
-                <td style="height:2px;width:86px;background-color:#2f66b3;font-size:0;line-height:0;">&nbsp;</td>
-                <td style="height:2px;width:34px;background-color:#c6d7ee;font-size:0;line-height:0;">&nbsp;</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0 0 8px 0;font-size:19px;line-height:25px;mso-line-height-rule:exactly;color:#2f3a40;">
-            <span style="display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;border-radius:14px;background-color:#2f66b3;color:#ffffff;font-size:16px;font-weight:bold;">m</span>
-            <span style="padding-left:10px;">(440)-503-2337</span>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0;font-size:19px;line-height:25px;mso-line-height-rule:exactly;color:#2f66b3;">
-            <span style="display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;border-radius:14px;background-color:#2f66b3;color:#ffffff;font-size:16px;font-weight:bold;">w</span>
-            <a href="https://FoundationAIAdvisory.com" target="_blank" style="padding-left:10px;color:#2f66b3;text-decoration:none;">FoundationAIAdvisory.com</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td valign="middle" style="padding:0 0 0 8px;width:85px;">
-      <a href="https://FoundationAIAdvisory.com" target="_blank" style="text-decoration:none;">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=85x85&margin=4&data=https%3A%2F%2FFoundationAIAdvisory.com" width="85" height="85" alt="Foundation AI Advisory website QR code" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:85px;height:85px;">
-      </a>
-    </td>
-  </tr>
-</table>
+```
+.
+├── README.md
+├── build_signatures.py        # regenerates each person's HTML from one template
+├── preview.html               # index page linking to all signatures
+├── assets/
+│   ├── faa-logo-dualmode-300.png   # logo with soft white halo (works on light + dark)
+│   ├── faa-logo-transparent-300.png
+│   ├── faa-logo-trimmed-300.png    # original logo on white background
+│   ├── badge-e.png            # @ badge for the email row
+│   ├── badge-m.png            # mobile badge
+│   ├── badge-w.png            # website badge
+│   └── badge-in.png           # LinkedIn badge
+├── ben-demichael/
+│   ├── signature.html         # paste-ready, references hosted assets
+│   └── preview.html           # browser preview using relative asset paths
+├── jason-kapcar/
+│   ├── signature.html
+│   └── preview.html
+└── thomas-wagenberg/
+    ├── signature.html
+    └── preview.html
 ```
 
-## Add It To Outlook
+`signature.html` files use absolute URLs that point at the GitHub Pages
+host so the images load no matter where the signature is pasted.
+`preview.html` files use relative paths so they work both locally and on
+Pages.
 
-1. Open `signature.html` in a browser.
-2. Select the rendered signature in the browser and copy it.
-3. In Outlook, go to **File > Options > Mail > Signatures**.
-4. Create a new signature, paste the copied signature into the editor, and save it.
-5. Send a test email to confirm the website link and QR code work.
+## Add a signature to Outlook
 
-For a production business deployment, host `assets/faa-logo-trimmed-300.png` under your own domain or GitHub Pages and update that image `src` to the hosted URL. The visible website URL and QR code already link to `https://FoundationAIAdvisory.com`.
+1. Open the appropriate preview URL in an **incognito / private window**
+   (so you bypass the GitHub Pages CDN cache and any prior browser cache):
+   - https://benjiai47.github.io/faa_outlook_signature/ben-demichael/preview.html
+   - https://benjiai47.github.io/faa_outlook_signature/jason-kapcar/preview.html
+   - https://benjiai47.github.io/faa_outlook_signature/thomas-wagenberg/preview.html
+2. Click inside the white panel and press **Ctrl+A** to select the whole
+   signature, then **Ctrl+C** to copy.
+3. In Outlook (web or new desktop), open **Settings → Mail → Signatures**
+   (or **File → Options → Mail → Signatures** in classic Outlook).
+4. Create or edit a signature, paste with **Ctrl+V**, and **Save**.
+5. Send a test email to yourself and verify in both light and dark mode:
+   - The logo stays legible (the halo gives the dark wordmark contrast).
+   - The `@`, `m`, `w`, and `in` badges sit beside their text, not above.
+   - All links open the correct destination.
+
+## Editing the signatures
+
+All three signatures are generated from a single template inside
+`build_signatures.py`. To change a contact detail, the layout, or the
+LinkedIn label format:
+
+1. Edit the `PEOPLE` list (or the `SIG_TEMPLATE` string) in
+   `build_signatures.py`.
+2. Run `python3 build_signatures.py` from the repo root.
+3. Commit the regenerated `signature.html` and `preview.html` files.
+
+## Design notes
+
+- **Layout** is a single outer table with two cells: logo on the left
+  (with a thin blue divider), text block on the right.
+- **Contact rows** each use a nested 2-cell micro-table so the badge
+  icon stays aligned next to its text. Outlook's Word engine ignores
+  `display:inline-block` and `border-radius` on spans, so the original
+  inline-block circle pills broke alignment in Outlook -- the PNG
+  badges + micro-tables fix that.
+- **Dark mode** is handled by the dual-mode logo
+  (`faa-logo-dualmode-300.png`). Most email clients auto-invert dark
+  text on dark backgrounds but never invert images, so the logo carries
+  a soft white halo that is invisible on white and provides contrast on
+  dark.
+- **Branding palette**: dark slate text `#2f3a40`, FAA blue `#2f66b3`,
+  light blue accent `#c6d7ee`, muted gray for the subtitle line
+  `#5a6770`.
+- **Font stack**: `Arial, Helvetica, sans-serif` -- safe everywhere.
+  Swap to `'Segoe UI', Arial, Helvetica, sans-serif` if you want native
+  Outlook Windows look.
