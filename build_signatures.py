@@ -128,7 +128,8 @@ PREVIEW_WRAPPER = """<!doctype html>
     .frame {{ background: #ffffff; padding: 24px; max-width: 720px; }}
     .hint {{ position: fixed; top: 12px; left: 12px; font-size: 12px; color: #5a6770;
             background: #ffffff; padding: 6px 10px; border-radius: 4px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08); }}
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            user-select: none; -webkit-user-select: none; }}
   </style>
 </head>
 <body>
