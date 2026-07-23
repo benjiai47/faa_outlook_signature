@@ -59,7 +59,7 @@ SIG_TEMPLATE = """<!--
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
               <tr>
                 <td valign="middle" style="width:18px;">
-                  <img src="{ASSETS}/badge-e.png" width="18" height="18" alt="" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
+                  <img src="{ASSETS}/badge-e.png" width="18" height="18" alt="Email" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
                 </td>
                 <td valign="middle" style="padding-left:8px;font-size:13px;line-height:18px;mso-line-height-rule:exactly;">
                   <a href="mailto:{email}" style="color:#2f66b3;text-decoration:none;">{email}</a>
@@ -73,10 +73,10 @@ SIG_TEMPLATE = """<!--
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
               <tr>
                 <td valign="middle" style="width:18px;">
-                  <img src="{ASSETS}/badge-m.png" width="18" height="18" alt="" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
+                  <img src="{ASSETS}/badge-m.png" width="18" height="18" alt="Mobile" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
                 </td>
                 <td valign="middle" style="padding-left:8px;font-size:13px;line-height:18px;mso-line-height-rule:exactly;color:#2f3a40;">
-                  {phone}
+                  <a href="tel:{phone_tel}" style="color:#2f3a40;text-decoration:none;">{phone}</a>
                 </td>
               </tr>
             </table>
@@ -87,7 +87,7 @@ SIG_TEMPLATE = """<!--
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
               <tr>
                 <td valign="middle" style="width:18px;">
-                  <img src="{ASSETS}/badge-w.png" width="18" height="18" alt="" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
+                  <img src="{ASSETS}/badge-w.png" width="18" height="18" alt="Website" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
                 </td>
                 <td valign="middle" style="padding-left:8px;font-size:13px;line-height:18px;mso-line-height-rule:exactly;">
                   <a href="https://FoundationAIAdvisory.com" target="_blank" style="color:#2f66b3;text-decoration:none;">FoundationAIAdvisory.com</a>
@@ -101,7 +101,7 @@ SIG_TEMPLATE = """<!--
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
               <tr>
                 <td valign="middle" style="width:18px;">
-                  <img src="{ASSETS}/badge-in.png" width="18" height="18" alt="" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
+                  <img src="{ASSETS}/badge-in.png" width="18" height="18" alt="LinkedIn" border="0" style="display:block;border:0;outline:none;text-decoration:none;width:18px;height:18px;">
                 </td>
                 <td valign="middle" style="padding-left:8px;font-size:13px;line-height:18px;mso-line-height-rule:exactly;">
                   <a href="{linkedin_url}" target="_blank" style="color:#2f66b3;text-decoration:none;">{linkedin_label}</a>
@@ -141,6 +141,16 @@ PREVIEW_WRAPPER = """<!doctype html>
 </html>
 """
 
+TXT_TEMPLATE = """{name}
+{title_plain}
+{subtitle_plain}
+Foundation AI Advisory -- Business First. AI Applied.
+Email: {email}
+Mobile: {phone}
+Web: https://FoundationAIAdvisory.com
+LinkedIn: {linkedin_url}
+"""
+
 PEOPLE = [
     dict(slug='ben-demichael',
          name='Ben DeMichael',
@@ -176,6 +186,9 @@ for p in PEOPLE:
     folder = os.path.join(ROOT, p['slug'])
     os.makedirs(folder, exist_ok=True)
 
+    # tel: href form of the phone number, e.g. (440) 503-2337 -> +14405032337
+    p = dict(p, phone_tel='+1' + ''.join(c for c in p['phone'] if c.isdigit()))
+
     # signature.html (uses absolute hosted asset URLs so paste-into-Outlook works)
     sig = SIG_TEMPLATE.format(ASSETS=GH_ASSETS, **p)
     with open(os.path.join(folder, 'signature.html'), 'w') as f:
@@ -187,4 +200,12 @@ for p in PEOPLE:
     with open(os.path.join(folder, 'preview.html'), 'w') as f:
         f.write(preview)
 
-    print(f"wrote {p['slug']}/signature.html and preview.html")
+    # signature.txt -- plain-text fallback (mobile Outlook, clients that strip HTML)
+    txt = TXT_TEMPLATE.format(
+        title_plain=p['title'].replace('&amp;', '&'),
+        subtitle_plain=p['subtitle'].replace('&amp;', '&'),
+        **p)
+    with open(os.path.join(folder, 'signature.txt'), 'w') as f:
+        f.write(txt)
+
+    print(f"wrote {p['slug']}/signature.html, preview.html, and signature.txt")
