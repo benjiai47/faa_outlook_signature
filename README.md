@@ -8,12 +8,12 @@ compatibility with the Outlook (Word) rendering engine, including dark mode.
 
 | Person | Role | Preview |
 | --- | --- | --- |
-| Ben DeMichael | Managing Partner | [ben-demichael/preview.html](https://benjiai47.github.io/faa_outlook_signature/ben-demichael/preview.html) |
-| Jason Kapcar | Partner & Chief AI Officer | [jason-kapcar/preview.html](https://benjiai47.github.io/faa_outlook_signature/jason-kapcar/preview.html) |
-| Thomas Wagenberg | AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://benjiai47.github.io/faa_outlook_signature/thomas-wagenberg/preview.html) |
+| Ben DeMichael | Managing Partner | [ben-demichael/preview.html](https://sig.foundationaiadvisory.com/ben-demichael/preview.html) |
+| Jason Kapcar | Partner & Chief AI Officer | [jason-kapcar/preview.html](https://sig.foundationaiadvisory.com/jason-kapcar/preview.html) |
+| Thomas Wagenberg | AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html) |
 
 The landing page at
-[preview.html](https://benjiai47.github.io/faa_outlook_signature/preview.html)
+[preview.html](https://sig.foundationaiadvisory.com/preview.html)
 links to all three.
 
 ## Repository layout
@@ -51,9 +51,9 @@ Pages.
 
 1. Open the appropriate preview URL in an **incognito / private window**
    (so you bypass the GitHub Pages CDN cache and any prior browser cache):
-   - https://benjiai47.github.io/faa_outlook_signature/ben-demichael/preview.html
-   - https://benjiai47.github.io/faa_outlook_signature/jason-kapcar/preview.html
-   - https://benjiai47.github.io/faa_outlook_signature/thomas-wagenberg/preview.html
+   - https://sig.foundationaiadvisory.com/ben-demichael/preview.html
+   - https://sig.foundationaiadvisory.com/jason-kapcar/preview.html
+   - https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html
 2. Click inside the white panel and press **Ctrl+A** to select the whole
    signature, then **Ctrl+C** to copy.
 3. In Outlook (web or new desktop), open **Settings → Mail → Signatures**
