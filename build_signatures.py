@@ -168,7 +168,7 @@ PEOPLE = [
 ]
 
 ROOT = '/home/user/faa_outlook_signature'
-GH_ASSETS = 'https://benjiai47.github.io/faa_outlook_signature/assets'
+GH_ASSETS = 'https://sig.foundationaiadvisory.com/assets'
 RELATIVE_ASSETS = '../assets'
 
 for p in PEOPLE:
