@@ -31,21 +31,26 @@ links to all three.
 │   ├── badge-m.png            # mobile badge
 │   ├── badge-w.png            # website badge
 │   └── badge-in.png           # LinkedIn badge
+├── CNAME                      # serves the site at sig.foundationaiadvisory.com
 ├── ben-demichael/
 │   ├── signature.html         # paste-ready, references hosted assets
-│   └── preview.html           # browser preview using relative asset paths
+│   ├── preview.html           # browser preview using relative asset paths
+│   └── signature.txt          # plain-text fallback (mobile / HTML-stripping clients)
 ├── jason-kapcar/
 │   ├── signature.html
-│   └── preview.html
+│   ├── preview.html
+│   └── signature.txt
 └── thomas-wagenberg/
     ├── signature.html
-    └── preview.html
+    ├── preview.html
+    └── signature.txt
 ```
 
-`signature.html` files use absolute URLs that point at the GitHub Pages
-host so the images load no matter where the signature is pasted.
-`preview.html` files use relative paths so they work both locally and on
-Pages.
+`signature.html` files use absolute image URLs on the company domain
+(`https://sig.foundationaiadvisory.com/assets/...`, served by GitHub
+Pages via a DNS CNAME) so the images load no matter where the signature
+is pasted. `preview.html` files use relative paths so they work both
+locally and on Pages.
 
 ## Add a signature to Outlook
 
