@@ -10,7 +10,7 @@ compatibility with the Outlook (Word) rendering engine, including dark mode.
 | --- | --- | --- |
 | Ben DeMichael | Managing Partner | [ben-demichael/preview.html](https://sig.foundationaiadvisory.com/ben-demichael/preview.html) |
 | Jason Kapcar | Partner & Chief AI Officer | [jason-kapcar/preview.html](https://sig.foundationaiadvisory.com/jason-kapcar/preview.html) |
-| Thomas Wagenberg | AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html) |
+| Thomas Wagenberg | Partner & AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html) |
 | Punith Kumar | AI Solutions Engineer | [punith-kumar/preview.html](https://sig.foundationaiadvisory.com/punith-kumar/preview.html) |
 
 The landing page at
