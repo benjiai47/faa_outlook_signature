@@ -11,10 +11,11 @@ compatibility with the Outlook (Word) rendering engine, including dark mode.
 | Ben DeMichael | Managing Partner | [ben-demichael/preview.html](https://sig.foundationaiadvisory.com/ben-demichael/preview.html) |
 | Jason Kapcar | Partner & Chief AI Officer | [jason-kapcar/preview.html](https://sig.foundationaiadvisory.com/jason-kapcar/preview.html) |
 | Thomas Wagenberg | AI Business Analyst, Finance & Operations | [thomas-wagenberg/preview.html](https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html) |
+| Punith Kumar | AI Solutions Engineer | [punith-kumar/preview.html](https://sig.foundationaiadvisory.com/punith-kumar/preview.html) |
 
 The landing page at
 [preview.html](https://sig.foundationaiadvisory.com/preview.html)
-links to all three.
+links to every signature.
 
 ## Repository layout
 
@@ -40,6 +41,10 @@ links to all three.
 │   ├── signature.html
 │   ├── preview.html
 │   └── signature.txt
+├── punith-kumar/
+│   ├── signature.html
+│   ├── preview.html
+│   └── signature.txt
 └── thomas-wagenberg/
     ├── signature.html
     ├── preview.html
@@ -59,6 +64,7 @@ locally and on Pages.
    - https://sig.foundationaiadvisory.com/ben-demichael/preview.html
    - https://sig.foundationaiadvisory.com/jason-kapcar/preview.html
    - https://sig.foundationaiadvisory.com/thomas-wagenberg/preview.html
+   - https://sig.foundationaiadvisory.com/punith-kumar/preview.html
 2. Click inside the white panel and press **Ctrl+A** to select the whole
    signature, then **Ctrl+C** to copy.
 3. In Outlook (web or new desktop), open **Settings → Mail → Signatures**
@@ -71,7 +77,7 @@ locally and on Pages.
 
 ## Editing the signatures
 
-All three signatures are generated from a single template inside
+All signatures are generated from a single template inside
 `build_signatures.py`. To change a contact detail, the layout, or the
 LinkedIn label format:
 

@@ -168,6 +168,14 @@ PEOPLE = [
          phone='(216) 849-6442',
          linkedin_url='https://www.linkedin.com/in/jasonkapcar',
          linkedin_label='Jason on LinkedIn'),
+    dict(slug='punith-kumar',
+         name='Punith Kumar',
+         title='AI Solutions Engineer',
+         subtitle='Client Delivery | AI Solutions Engineering',
+         email='pkumar@foundationaiadvisory.com',
+         phone='+44 7918 414668',
+         linkedin_url='https://www.linkedin.com/in/punith-kumar1/',
+         linkedin_label='Punith on LinkedIn'),
     dict(slug='thomas-wagenberg',
          name='Thomas Wagenberg',
          title='AI Business Analyst, Finance &amp; Operations',
@@ -186,8 +194,11 @@ for p in PEOPLE:
     folder = os.path.join(ROOT, p['slug'])
     os.makedirs(folder, exist_ok=True)
 
-    # tel: href form of the phone number, e.g. (440) 503-2337 -> +14405032337
-    p = dict(p, phone_tel='+1' + ''.join(c for c in p['phone'] if c.isdigit()))
+    # tel: href form of the phone number. Numbers written with a leading +
+    # (international, e.g. +44 7918 414668) keep their country code; bare
+    # US numbers like (440) 503-2337 get +1 prepended.
+    digits = ''.join(c for c in p['phone'] if c.isdigit())
+    p = dict(p, phone_tel=('+' + digits) if p['phone'].startswith('+') else ('+1' + digits))
 
     # signature.html (uses absolute hosted asset URLs so paste-into-Outlook works)
     sig = SIG_TEMPLATE.format(ASSETS=GH_ASSETS, **p)
